@@ -83,7 +83,7 @@ label, #commentaire {
   padding: 10%;
 }
 .tex {
-  font-size: 1.4em;
+  font-size: 1em;
   text-shadow: 1px 1px black;
   color: white;
 }
@@ -161,12 +161,6 @@ h3 {
 }
 /* le test */
 
-.des {
-  animation: star 10s ease-out infinite;
-}
-.codeuses {
-  animation: wars 10s ease-out infinite;
-}
 .byline span {
   animation: spin-letters 10s linear infinite;
 }
@@ -238,8 +232,8 @@ img {
 .des {
   color: gray;
   font-size: 1.5em;
-  top: 2.5em;
-  right: 6em;
+  top: 2em;
+  right: 30em;
 }
 
 .codeuses {
@@ -268,7 +262,7 @@ img {
     font-size: 0.8em;
   }
   .des {
-    right: 5em;
+    right: 25em;
   }
 }
 
@@ -283,7 +277,7 @@ img {
     font-size: 8px;
   }
   .des {
-    right: 3em;
+    right: 20em;
   }
 }
 @media only screen and (max-width: 430px) {
@@ -291,7 +285,7 @@ img {
     font-size: 6px;
   }
   .des {
-    right: 1em;
+    right: 17em;
   }
   .codeuses {
     left: 15em;
