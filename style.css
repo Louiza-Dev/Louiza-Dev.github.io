@@ -303,7 +303,7 @@ img {
 }
 /* un autres essaie */
 
-/*** Media queries for adjusting to different screen sizes ***//*
+/*** Media queries for adjusting to different screen sizes ***/
 @media only screen and (max-width: 990px) {
   .descodeuses-demo {
     font-size: 0.8em;
@@ -337,4 +337,4 @@ img {
   .webitech {
     left: 15em;
   }
-}*/
+}
