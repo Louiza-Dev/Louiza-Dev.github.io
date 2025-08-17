@@ -6,6 +6,18 @@ h1, h2, h3, h4, h5, h6, .li, .log, .p, .note  {
   justify-content: center;
     text-align: center;
 }
+.p  {
+  font-size: 1.2em;
+  text-shadow: 1.2px 1.2px gray;
+  color: black;
+}
+.pdt  {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  color: #1E90FF;
+}
 h1, h2 {
   text-align: center;
   text-shadow: 1.5px 1.5px blue;
@@ -30,36 +42,15 @@ h1, h2 {
   width: 50vw;
   border-radius: 50%;
 }
-/* les tailles des images loisir */
-.loisir {
-  height: 35vh;
-  width: 25vw;
-}
 
 /* background de la page Développement */
-.bgDvl {
+.bgDvl, .bgLang{
   position: relative;
   width: 100%;
 }
 .bgDvl::before {
   content: "";
-  background-image: url("https://www.tres-cyber.com/wp-content/uploads/2018/02/langage-web.png");
-  background-size: contain;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.1;
-}
-/*background de la page langage*/
-.bgLang {
-  position: relative;
-  width: 100%;
-}
-.bgLang::before {
-  content: "";
-  background-image: url("https://tse2.mm.bing.net/th?id=OIP.5HkmZmxBEy5cra9bVWNAXAAAAA&pid=Api&P=0&w=266&h=178");
+  background-image: url("icons/langages.png");
   background-size: contain;
   position: absolute;
   top: 0px;
@@ -68,6 +59,450 @@ h1, h2 {
   left: 0px;
   opacity: 0.2;
 }
+/*background de la page langage*/
+.bgLang::before {
+  content: "";
+  background-image: url("icons/langues.jpg");
+  background-size: contain;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
+}
+/* Experiences Pro Effet Effet  EFFet Effet*/
+/*  Master Effet DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD */
+.flip-cardd  {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.flip-frontt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+  z-index: 2;
+}
+
+.flip-backk {
+  position: absolute;
+  top: 100%; /* cachée en dessous au début */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ADD8E6; /* fond bleu claire */
+  color: black;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+  transition: top 0.6s ease;
+  z-index: 1;
+}
+
+.flip-cardd:hover .flip-frontt {
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+.flip-cardd:hover .flip-backk {
+  top: 0;
+}
+.flip-backk ul {
+  padding-left: 1rem;
+  margin: 0;
+  list-style: none;
+}
+
+.flip-backk li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+.image-master {
+  background-image: url("icons/background/diplomeMaster.avif");
+}
+
+/* Stage Formation Effet DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD  */
+.split-card {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* Deux moitiés de la même image */
+.split-image {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url("icons/background/formation.jpg"); /* ton image ici */
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+  z-index: 2;
+}
+
+/* Côté gauche */
+.split-left {
+  left: 0;
+  background-position: left center;
+}
+
+/* Côté droit */
+.split-right {
+  right: 0;
+  background-position: right center;
+}
+
+/* Survol : séparation vers la gauche/droite */
+.split-card:hover .split-left {
+  transform: translateX(-100%);
+}
+.split-card:hover .split-right {
+  transform: translateX(100%);
+}
+
+/* Contenu texte en arrière-plan */
+.split-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #ADD8E6; /* fond bleu clair */
+  color: black;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.6s ease 0.3s;
+}
+
+.split-card:hover .split-background {
+  opacity: 1;
+}
+
+.split-background h3 {
+  margin-bottom: 1rem;
+}
+
+.split-background ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.split-background li {
+  margin-bottom: 0.5rem;
+}
+
+/* Hottesse de caisse Effet  DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD */
+.flip-carde {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.flip-innere {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.flip-fronte, .flip-backe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.6s ease;
+}
+
+.flip-fronte {
+  position: relative;
+  pointer-events: auto;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;           /* montre toute l’image */
+  background-repeat: no-repeat;       /* évite que l’image se répète */
+  background-position: center;        /* centre l’image */
+  transition: opacity 0.6s ease;
+}
+
+.flip-backe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ADD8E6; /* fond bleu claire */
+  color: black;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  z-index: 1;
+  overflow-y: auto;
+}
+
+/* Survol = on inverse l’opacité */
+.flip-carde:hover .flip-fronte {
+  pointer-events: none; /* désactive les clics et le scroll bloquant */
+  opacity: 0;
+}
+
+.flip-carde:hover .flip-backe {
+  opacity: 1;
+}
+/* Style liste */
+.flip-backe ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.flip-backe li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+/* Image spécifique pour l'alternance */
+.image-caisse {
+  background-image: url("icons/background/hotesse.jpg");
+}
+
+/*  Maths Effet  DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD*/
+body {
+  background: #f4f4f4;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.zoom-card {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.zoom-image {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.5s ease;
+  position: relative;      /* 👈 nécessaire */
+  z-index: 1;              /* 👈 image derrière le texte */
+}
+
+.zoom-card:hover .zoom-image {
+  transform: scale(1.1); /* effet zoom */
+}
+
+.zoom-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(173, 216, 230, 0.8); /* bleu marine transparent */
+  color: black;
+  padding: 1rem;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: flex;
+  justify-content: flex-start; /* 👈 commence en haut */
+  overflow-y: auto;           /* 👈 scroll si trop de texte */
+  z-index: 2;
+}
+
+.zoom-card:hover .zoom-text {
+  opacity: 1;
+}
+
+.zoom-text h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.zoom-text ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.zoom-text li {
+  margin-bottom: 0.6rem;
+}
+/*  Comptabilité Effet   DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD         */
+.flip-box {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 16 / 9;
+  perspective: 1000px;
+  margin: 1rem auto;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-front, .flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Face avant : image */
+.flip-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Face arrière : fond coloré + texte */
+.flip-back {
+  background-color: #ADD8E6; /* fond bleu clair */
+  color: black;
+  transform: rotateX(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.flip-box:hover .flip-back {
+  opacity: 1;
+}
+
+.flip-back h3 {
+  margin-bottom: 1rem;
+}
+
+.flip-back ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.flip-back li {
+  margin-bottom: 0.5rem;
+}
+/* Effet Loisir  */
+/* Effet Cuisine   */
+.img-hover-zoom {
+  width: 25vw;
+  height: 35vh;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #f0f0f0; /* optionnel, au cas où l’image n’est pas remplie */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-hover-zoom img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* <-- clé ici */
+  transition: transform 0.4s ease;
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.1);
+}
+/* Effet Lecture   */
+.img-hover-rotate {
+  width: 25vw;
+  height: 35vh;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* pour éviter les débordements lors de la rotation */
+}
+
+.img-hover-rotate img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ou 'cover' si tu préfères remplir le cadre */
+  transition: transform 0.5s ease;
+}
+
+.img-hover-rotate:hover img {
+  transform: rotate(6deg) scale(1.03);
+}
+/* Effet Cinema  */
+.img-hover-grayscale {
+  width: 25vw;
+  height: 35vh;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.img-hover-grayscale img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ou 'cover' selon ton besoin */
+  filter: grayscale(0%);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.img-hover-grayscale:hover img {
+  transform: scale(1.05);
+  filter: grayscale(100%);
+}
+
+
+/* Fin d'Effet     Fin d'Effet    Fin d'Effet     Fin d'Effet   Fin d'Effet     Fin d'Effet Fin d'Effet     Fin d'Effet */
+
 /* logo des contacts */
  .lgcnt {
    height: 10vh;
@@ -98,14 +533,14 @@ label, #commentaire {
     padding-right: 1%;
 }
 .flip-card {
-  background-color: transparent;/
+  background-color: transparent;
 }
 .text {
   padding: 10%;
 }
 .tex {
-  font-size: 1em;
-  text-shadow: 1px 1px black;
+  font-size: 1.3em;
+  text-shadow: 1.4px 1.4px black;
   color: white;
 }
 .gauche, .droit {
@@ -226,7 +661,7 @@ h3 {
 /* General styles and layout */
 .bgrnd {
   height: 30vh;
-  background-image: url("https://cssanimation.rocks/demo/starwars/images/bg.jpg");
+  background-image: url("icons/DevFllStk.jpg");
 }
 
 .descodeuses-demo {
@@ -257,7 +692,7 @@ img {
   right: 25em;
 }
 
-.bnpparibas {
+.automatisation {
   color: gray;
   font-size: 1.5em;
   bottom: 2em;
@@ -284,7 +719,7 @@ img {
   transform: rotateY(360deg);
 }
 
-.bnpparibas, .maths {
+.automatisation, .maths {
   position: absolute;
     animation: spin-letters 4s linear infinite;
   transform: rotateX(360deg);
@@ -332,9 +767,9 @@ img {
     font-size: 6px;
   }
   .descodeuses {
-    right: 17em;
+    right: 10em;
   }
   .webitech {
-    left: 15em;
+    left: 8em;
   }
 }
